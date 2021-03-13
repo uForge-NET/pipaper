@@ -2,3 +2,7 @@ name: PiPaper
 author: uForge
 version: 1.0
 main: net.uforge.mc.pl.pipaper.PiPaper
+
+commands:
+  pipaper:
+    description: Main command of plugin.
