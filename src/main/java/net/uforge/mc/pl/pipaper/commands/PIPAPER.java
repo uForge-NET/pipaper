@@ -12,7 +12,6 @@ public class PIPAPER implements CommandInterface{
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         Player player = (Player) sender;
-
         player.sendMessage(u.colorize("&9&lPiPaper - Commands:"));
         player.sendMessage(u.colorize("&e- list"));
         player.sendMessage(u.colorize("&e- give {paperId}"));
