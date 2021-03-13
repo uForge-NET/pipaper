@@ -1,9 +1,0 @@
-net/uforge/mc/pl/pipaper/PiPaper.class
-net/uforge/mc/pl/pipaper/commands/GivePaper.class
-net/uforge/mc/pl/pipaper/events/PaperEvents.class
-net/uforge/mc/pl/pipaper/commands/PaperList.class
-net/uforge/mc/pl/pipaper/PaperHandler.class
-net/uforge/mc/pl/pipaper/commands/CommandHandler.class
-net/uforge/mc/pl/pipaper/utils/Utils.class
-net/uforge/mc/pl/pipaper/commands/CommandInterface.class
-net/uforge/mc/pl/pipaper/commands/PIPAPER.class
