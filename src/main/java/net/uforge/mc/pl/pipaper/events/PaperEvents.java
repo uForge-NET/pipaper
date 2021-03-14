@@ -30,7 +30,11 @@ public class PaperEvents implements Listener {
                     for(String command : core.getConfig().getStringList("papers." + entry.getKey() + ".commands")) {
                         core.getServer().dispatchCommand(core.getServer().getConsoleSender(), command.replace("{sender}", player.getName()));
                         if(core.getConfig().getBoolean("papers." + entry.getKey() + ".removeAfterUse")) {
-                            player.getInventory().remove(item);
+                            if(item.getAmount() == 1) {
+                                player.getInventory().remove(item);
+                            } else {
+                                item.setAmount(item.getAmount() - 1);
+                            }
                         }
                     }
                 }
