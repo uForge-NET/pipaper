@@ -1,6 +1,6 @@
 name: PiPaper
 author: uForge
-version: 1.0
+version: 1.1-BETA
 description: Custom paper interact plugin.
 main: net.uforge.mc.pl.pipaper.PiPaper
 
