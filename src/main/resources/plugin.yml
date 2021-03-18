@@ -7,3 +7,8 @@ main: net.uforge.mc.pl.pipaper.PiPaper
 commands:
   pipaper:
     description: Main command of plugin.
+    permission: pipaper.main
+
+permissions:
+  pipaper.main:
+    description: Allows main PiPaper command.

@@ -1,9 +1,6 @@
 package net.uforge.mc.pl.pipaper;
 
-import net.uforge.mc.pl.pipaper.commands.CommandHandler;
-import net.uforge.mc.pl.pipaper.commands.GivePaper;
-import net.uforge.mc.pl.pipaper.commands.PIPAPER;
-import net.uforge.mc.pl.pipaper.commands.PaperList;
+import net.uforge.mc.pl.pipaper.commands.*;
 import net.uforge.mc.pl.pipaper.events.PaperEvents;
 import net.uforge.mc.pl.pipaper.utils.Utils;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,7 +14,7 @@ public class PiPaper extends JavaPlugin {
     @Override
     public void onEnable() {
         registerEvents();
-        loadConfig();
+        Config.load();
         PaperHandler.generatePapers();
         registerCommands();
 
@@ -42,6 +39,7 @@ public class PiPaper extends JavaPlugin {
         handler.register("pipaper", new PIPAPER());
         handler.register("give", new GivePaper());
         handler.register("list", new PaperList());
+        handler.register("reload", new ReloadConfig());
         getCommand("pipaper").setExecutor(handler);
     }
 
@@ -49,10 +47,5 @@ public class PiPaper extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PaperEvents(), this);
     }
 
-    private void loadConfig() {
-        getConfig().options().copyDefaults(true);
-        saveConfig();
-        u.sendConsole(u.INFO, "Config has been loaded.");
-    }
 
 }

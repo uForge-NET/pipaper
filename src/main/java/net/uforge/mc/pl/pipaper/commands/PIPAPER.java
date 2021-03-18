@@ -14,6 +14,7 @@ public class PIPAPER implements CommandInterface{
         Player player = (Player) sender;
         player.sendMessage(u.colorize("&9&lPiPaper - Commands:"));
         player.sendMessage(u.colorize("&e- list"));
+        player.sendMessage(u.colorize("&e- reload"));
         player.sendMessage(u.colorize("&e- give {paperId}"));
 
         return false;
